@@ -9,6 +9,7 @@ import com.example.weatherapp.network.RetrofitHelper
 import com.example.weatherapp.network.WeatherApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,6 +42,12 @@ class MainActivity : AppCompatActivity() {
             Log.d("testlog","Forecast-------> ${forecast.message()}")
             Log.d("testlog","Forecast-------> ${forecast.isSuccessful}")
             Log.d("testlog","Forecast-------> ${forecast.body()}")
+
+            withContext(Dispatchers.Main){
+                locationLable.text = "Location: $latResult, $lonResult"
+                currentWeatherLable.text = currentWeather.body()?.weather?.first()?.description ?: ""
+                forecastLable.text = forecast.body()?.list?.first()?.weather?.first()?.description ?: ""
+            }
         }
     }
 }
