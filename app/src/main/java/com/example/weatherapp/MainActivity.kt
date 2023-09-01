@@ -49,5 +49,6 @@ class MainActivity : AppCompatActivity() {
                 forecastLable.text = forecast.body()?.list?.first()?.weather?.first()?.description ?: ""
             }
         }
+
     }
 }
