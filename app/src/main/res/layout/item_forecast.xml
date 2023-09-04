@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_recycler_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:elevation="2dp">
     
     <com.google.android.material.card.MaterialCardView
@@ -15,7 +16,7 @@
         app:cardElevation="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,31 +29,31 @@
                 android:layout_height="wrap_content"
                 android:text="Date"
                 android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/item_recycler_temp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/item_recycler_temp"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/item_recycler_temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Temperature"
                 android:layout_marginTop="4dp"
+                android:text="Temperature"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/item_recycler_description"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/item_recycler_date"
-                app:layout_constraintBottom_toTopOf="@+id/item_recycler_description"/>
+                app:layout_constraintTop_toBottomOf="@+id/item_recycler_date" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/item_recycler_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description"
                 android:layout_marginTop="4dp"
+                android:text="Description"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/item_recycler_temp"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@+id/item_recycler_temp" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/item_recycler_image"
@@ -60,9 +61,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
