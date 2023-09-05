@@ -1,14 +1,13 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("dagger.hilt.android.plugin")
-    id("kotlin-kapt")
-
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
     namespace = "com.example.weatherapp"
-    compileSdk = 33
+    compileSdk = 33 //33
 
     defaultConfig {
         applicationId = "com.example.weatherapp"
@@ -56,14 +55,18 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
     // Coroutine
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
+    //implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-alpha01")
 
     //Dependency Injection
-    implementation ("com.google.dagger:hilt-android:2.42")
-    kapt ("com.google.dagger:hilt-android-compiler:2.42")
+//    implementation ("com.google.dagger:hilt-android:2.42")//2.42
+//    kapt ("com.google.dagger:hilt-android-compiler:2.42") //2.42
+    implementation("com.google.dagger:hilt-android:2.48")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
 
-    implementation ("androidx.fragment:fragment-ktx:1.3.6")
-
+    implementation ("androidx.fragment:fragment-ktx:1.3.6") //1.3.6
+}
+kapt {
+    correctErrorTypes = true
 }

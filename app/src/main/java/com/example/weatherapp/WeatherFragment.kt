@@ -17,16 +17,12 @@ import com.example.weatherapp.repository.WeatherRepositoryImpl.Companion.WEATHER
 import com.example.weatherapp.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
-/**
- * A simple [Fragment] subclass.
- * Use the [WeatherFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 @AndroidEntryPoint
-class WeatherFragment : Fragment() {
+class WeatherFragment : Fragment(){
 
     private var _binding : FragmentWeatherBinding? = null
     private val binding get() = _binding
+
     private val mainViewModel : MainViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -34,7 +30,6 @@ class WeatherFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentWeatherBinding.inflate(inflater,container, false)
-        // Inflate the layout for this fragment
         return binding?.root
     }
 
@@ -62,7 +57,7 @@ class WeatherFragment : Fragment() {
                     binding?.weatherImage?.setImageDrawable(
                         ContextCompat.getDrawable(
                             requireContext(),
-                            R.drawable.cloud
+                            R.drawable.clouds
                         )
                     )
                 }

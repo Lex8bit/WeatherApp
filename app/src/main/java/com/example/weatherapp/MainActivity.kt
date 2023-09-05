@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //ИНИЦИАЛИЗИРУЕМ БИНДИНГ
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -36,15 +35,13 @@ class MainActivity : AppCompatActivity() {
             mainViewModel.getCoordinates("London")
         }
 
-        mainViewModel.coordinatesResult.observe(this, Observer{
-            lifecycleScope.launch(Dispatchers.Main){
+        mainViewModel.coordinatesResult.observe(this, Observer {
+            lifecycleScope.launch(Dispatchers.Main) {
                 mainViewModel.getCurrencyWeather(it.lat, it.lon)
                 mainViewModel.getForecast(it.lat, it.lon)
             }
         })
-
         prepareViewPager()
-
     }
 
     private fun prepareViewPager() {

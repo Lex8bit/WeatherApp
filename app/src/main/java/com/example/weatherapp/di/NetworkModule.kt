@@ -14,12 +14,12 @@ import dagger.hilt.components.SingletonComponent
 class NetworkModule {
 
     @Provides
-    fun provideWeatherRepository(weatherApi: WeatherApi) : WeatherRepository{
+    fun provideWeatherRepository(weatherApi: WeatherApi): WeatherRepository {
         return WeatherRepositoryImpl(weatherApi)
     }
 
     @Provides
-    fun provideRequestApi() : WeatherApi{
+    fun provideRequestApi(): WeatherApi{
         return RetrofitHelper.getInstance().create(WeatherApi::class.java)
     }
 }
