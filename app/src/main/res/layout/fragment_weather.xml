@@ -102,7 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_launcher_background"/>
+                    android:src="@drawable/ic_baseline_compress_24"/>
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/weather_pressure_label"
@@ -135,7 +135,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_launcher_background"/>
+                    android:src="@drawable/ic_baseline_water_drop_24"/>
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/weather_humidity_label"
@@ -168,7 +168,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_launcher_background"/>
+                    android:src="@drawable/ic_baseline_wind_power_24"/>
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/weather_wind_speed_label"
