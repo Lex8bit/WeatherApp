@@ -66,6 +66,11 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.48")
 
     implementation ("androidx.fragment:fragment-ktx:1.3.6") //1.3.6
+
+    //UNIT TEST
+    androidTestImplementation ("org.jetbrains.kotlin:kotlin-test-junit: VERSION_18")
+    testImplementation ("org.mockito:mockito-core:5.1.1")
+    testImplementation ("androidx.arch.core:core-testing:2.1.0")
 }
 kapt {
     correctErrorTypes = true
